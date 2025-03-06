@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+
+        function suma(a ,b=100){
+            console.log(`Suma dintre ${a} si ${b} este: ${a+b}`);
+            return a+b;
+        }
+        let mysum = suma(10,20)
+        console.log(`Suma este:${mysum}`);
+
+        var myArr=['tv','laptop','pc','mobile','monitor'];
+        myArr[5]='book';
+        myArr[3]='plasma';
+        myArr[8]='tastatura';
+
+        var newArr={
+            0:'a',
+            1:'b',
+            2:'c',
+            3:'d'
+        }
+
+        for(let i=0; i<myArr.length; i++){
+            if(typeof myArr[i] !='undefined')
+            document.write('<p>' + myArr[i] + '<p>')
+        }
+
+         for (const key in newArr) {
+            document.write('<p>' + newArr[key] + '<p>')
+        }
+
+         for (const element in newArr) {
+             document.write('<p>' + element + '<p>')
+        }
+
+        for (const element of Object.values(newArr)) {
+            document.write('<p>' + element + '<p>')
+            }        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <h2>Prima pagina HTML</h2>
+
+    <p id="myid">sssssss</p>
+    <p id="myid2"></p>
+    este important sa navigam cu elemente HTML
+    <script>
+        var id=document.getElementById("myid");
+        salut(id, "Salut1");
+        salut(id, "Salut2");
+        function salut(id, mess){
+            id.innerHTML=mess;
+        }
+        var id2=document.getElementById("myid2");
+        salut(id2, "Salut3");
+    </script>
+    
+</body>
+</html>
