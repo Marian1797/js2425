@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/data.js"></script>
+    <script>
+        console.log(data);
+        data.forEach((element,index) => {
+            document.write(`<h1>Elementul cu indexul ${index} are ID:${element.id}</h1>`);
+            document.write(`<p> Titlul este: ${element.title} </p>`);
+            document.write(`<p>Durata filmului este de:${element.duration}</p>`);
+            document.write(`<p>Tagurile sunt:</p>`);
+            
+            element.tags.forEach(function(val){
+                document.write(`<li>${val}</li>`);
+            })
+           
+
+            document.write(`<p>Gazdele sunt:</p>`);
+            
+            element.hosts.forEach(function(val){
+                document.write(`<li>${val}</li>`);
+            });
+           
+        });
+    </script>
+</body>
+</html>

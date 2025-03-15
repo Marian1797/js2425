@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(id,nume,varsta,nota1,nota2){
+            const NOTAOFICIU=2;
+            this.id = id;
+            this.nume = nume;
+            this.varsta =varsta;
+            this.nota1=nota1;
+            this.nota2=nota2;
+
+            this.Salut=function(){
+                console.log(`Salut numele meu este ${this.nume}`)
+            }
+            this.Examen=function(){
+                if(this.nota1>2 && this.nota1<=8){
+                    this.nota1=this.nota1 + NOTAOFICIU;
+                }else{
+                    this.nota1=2
+                }
+                if(this.nota2>2 && this.nota2<=8){
+                    this.nota2=this.nota2 + NOTAOFICIU;
+                }else{
+                    this.nota2=2
+                }
+            }
+            this.Medie= function(){
+                console.log(`Nota finala este ${(nota1+nota2)/2}`)
+            }
+
+        }
+
+        const Student1=new Student(1,'Enache Marian',23,7,8);
+        Student1.Salut();
+        Student1.Examen();
+        Student1.Medie();
+
+        const Student2=new Student(2,'Ionescu Andre',24,8,9);
+        console.log(Student2);
+        Student2.Salut();
+        Student2.Examen();
+        Student2.Medie();
+
+    </script>
+</body>
+</html>
